@@ -1,0 +1,12 @@
+{
+  "name": "packageB",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "cd ../../ && upbin jest --projects packages/packageB"
+  },
+  "devDependencies": {
+    "upbin": "^0.9.2"
+  }
+}
