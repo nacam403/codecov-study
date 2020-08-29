@@ -1,4 +1,4 @@
-name: testY
+name: test
 
 on: pull_request
 
@@ -18,11 +18,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - run: yarn
-    - run: yarn testY
+    - run: yarn bootstrap
+    - run: yarn test
 
     - uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        directory: coverage
-        flags: testY
-        name: codecov-testY
+        directory: packages/packageA/coverage
+        flags: packageA
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: packages/packageB/coverage
+        flags: packageB
