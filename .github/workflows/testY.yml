@@ -25,4 +25,4 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         directory: coverage
         flags: testY
-        name: codecov-testX
+        name: codecov-testY
