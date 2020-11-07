@@ -1,5 +1,5 @@
 export function functionA1() {
-  return 0;
+  return 1;
 }
 
 export function functionA2() {
